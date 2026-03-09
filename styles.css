@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url("https://raw.githubusercontent.com/hackx2/wawa.nyanlabs.men/refs/heads/main/index.png") no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    /* i can't be bothered with handling external fonts, so we're just going to use this */
+    font-family: "Comic Sans MS", "Comic Sans", "Comic Neue", cursive;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* ugly as heck... */
+    text-shadow: 2px 2px 4px #000; 
+}
+
+canvas {
+    position: fixed;
+}
+
+#wawa span {
+  display: inline-block; 
+  animation: doStuffs 0.1s infinite;
+}
+
+#wawa span:nth-child(even) { animation-direction: reverse; animation-delay: -0.05s; }
+#wawa span:nth-child(odd) { animation-duration: 0.17s; }
+
+@keyframes doStuffs {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(1px, -1px); }
+  50% { transform: translate(-0.5px, .5px); }
+  75% { transform: translate(.5px, 1px); }
+  100% { transform: translate(0, 0); }
+}
